@@ -29,6 +29,9 @@ public class Cashier {
 		}
 	}
 
+	/**
+	 * @return Gesamtpreis (in Cent)
+	 */
 	public int finishPurchase() {
 		int price = totalPrice;
 		if (ticketCount >= 10) {
