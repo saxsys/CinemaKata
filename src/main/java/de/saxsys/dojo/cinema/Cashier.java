@@ -11,11 +11,9 @@ package de.saxsys.dojo.cinema;
  */
 public class Cashier {
 
-	// TODO Wie wird die Variable totalPrice inititalisert (Gibt's einen
-	// UnitTest?)?
-	private int totalPrice;
+	private int totalPrice = 0;
 	private String title;
-	private int ticketCount;
+	private int ticketCount = 0;
 
 	void startPurchase(String title) {
 		this.title = title;
@@ -24,12 +22,11 @@ public class Cashier {
 	public void addTicket(int age) {
 		ticketCount++;
 
-		// TODO Was bedeutet das?
+		// Älter als 14 bedeutet Erwachsener und muss einen höheren Preis
+		// bezahlen
 		if (age > 14) {
-			// TODO Was ist 800?
 			totalPrice += 800;
 		} else {
-			// TODO Was ist 550?
 			totalPrice += 550;
 		}
 	}
@@ -39,12 +36,11 @@ public class Cashier {
 	 */
 	public int finishPurchase() {
 
-		// TODO So viele Preise ?!?
+		// TODO Refactoring, weil zu viele Preis-Variablen verwirren
 		int price = totalPrice;
 
-		// TODO Was ist 10?
+		// Gruppenpreis (600) vergeben
 		if (ticketCount >= 10) {
-			// TODO Was bedeutet das?
 			int discountedPrice = ticketCount * 600;
 
 			if (discountedPrice < totalPrice) {
