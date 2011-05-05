@@ -1,7 +1,7 @@
 package de.saxsys.dojo.cinema;
 
 /**
- * Die Klasse Cashier bildet eine Kinokasse ab, an der man der folgende
+ * Die Klasse Cashier bildet eine Kinokasse ab, an der man in der folgenden
  * Reihenfolge bezahlt:
  * <ol>
  * <li>Film auswählen, {@link #startPurchase(String title)}</li>
@@ -11,6 +11,8 @@ package de.saxsys.dojo.cinema;
  */
 public class Cashier {
 
+	// TODO Wie wird die Variable totalPrice inititalisert (Gibt's einen
+	// UnitTest?)?
 	private int totalPrice;
 	private String title;
 	private int ticketCount;
@@ -22,9 +24,12 @@ public class Cashier {
 	public void addTicket(int age) {
 		ticketCount++;
 
+		// TODO Was bedeutet das?
 		if (age > 14) {
+			// TODO Was ist 800?
 			totalPrice += 800;
 		} else {
+			// TODO Was ist 550?
 			totalPrice += 550;
 		}
 	}
@@ -33,9 +38,15 @@ public class Cashier {
 	 * @return Gesamtpreis (in Cent)
 	 */
 	public int finishPurchase() {
+
+		// TODO So viele Preise ?!?
 		int price = totalPrice;
+
+		// TODO Was ist 10?
 		if (ticketCount >= 10) {
+			// TODO Was bedeutet das?
 			int discountedPrice = ticketCount * 600;
+
 			if (discountedPrice < totalPrice) {
 				price = discountedPrice;
 			}
