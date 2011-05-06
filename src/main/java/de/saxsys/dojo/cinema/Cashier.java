@@ -4,8 +4,8 @@ package de.saxsys.dojo.cinema;
  * Die Klasse Cashier bildet eine Kinokasse ab, an der man in der folgenden
  * Reihenfolge bezahlt:
  * <ol>
- * <li>Film ausw‰hlen, {@link #startPurchase(String title)}</li>
- * <li>Alle Tickets mit Altersangabe w‰hlen, {@link #addTicket(int age)}</li>
+ * <li>Film ausw√§hlen, {@link #startPurchase(String title)}</li>
+ * <li>Alle Tickets mit Altersangabe w√§hlen, {@link #addTicket(int age)}</li>
  * <li>Preis berechnen lassen, {@link #finishPurchase()}</li>
  * </ol>
  */
@@ -22,7 +22,7 @@ public class Cashier {
 	public void addTicket(int age) {
 		ticketCount++;
 
-		// ƒlter als 14 bedeutet Erwachsener und muss einen hˆheren Preis
+		// √Ñlter als 14 bedeutet Erwachsener und muss einen h√∂heren Preis
 		// bezahlen
 		if (age > 14) {
 			totalPrice += 800;
